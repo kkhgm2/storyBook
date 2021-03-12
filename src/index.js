@@ -1,30 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import {Square} from "./Square"
+
+// import { Board } from "./Board";
 
 
 
-export function Square(props) {
-  return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
-  )
-}
+// export function Square(props) {
+//   return (
+//     <button className="square" onClick={props.onClick}>
+//       {props.value}
+//     </button>
+//   )
+// }
 
 
 export class Board extends React.Component {
   renderSquare(i) {
+    console.log(this.props.squares[i])
     return (
-      <Square 
-        value={this.props.squares[i]} 
-        onClick={() => this.props.onClick(i)}
-      />
+        <Square 
+          value={this.props.squares[i]} 
+          onClick={() => this.props.onClick(i)}
+          />
     );
   }
 
   render() {
-    console.log("bord")
     return (
       <div>
         <div className="board-row">
@@ -124,7 +127,7 @@ export class Game extends React.Component {
 
 }
 
-function calculateWinner(squares) {
+export function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
