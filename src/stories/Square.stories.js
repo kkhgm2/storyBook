@@ -1,5 +1,6 @@
 import React from 'react';
-import { Square } from "../index";
+import { Square } from "../Square";
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: "square component",
@@ -11,6 +12,7 @@ const Template = (args) => <Square {...args}/>;
 export const FirstStory = Template.bind({});
 
 FirstStory.args = {
-    value: "a"
+    value: "a",
+    onClick: action("square") 
 }
 
