@@ -3,7 +3,6 @@ import { Board } from "./Board";
 
 export class Game extends React.Component {
     constructor(props) {
-      console.log(props)
       super(props);
       this.state = {
         history: [{
@@ -17,7 +16,6 @@ export class Game extends React.Component {
       const history = this.state.history;
       const current = history[this.state.stepNumber];
       const winner = calculateWinner(current.squares);
-      console.log(this)
   
       const moves = history.map((step, move) => {
         const desc = move ?
