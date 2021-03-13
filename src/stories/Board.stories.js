@@ -1,5 +1,5 @@
 import React from 'react';
-import { Board } from "../index";
+import { Board } from "../Board";
 
 import { action } from '@storybook/addon-actions'
 
