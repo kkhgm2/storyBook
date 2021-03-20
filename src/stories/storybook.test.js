@@ -1,2 +1,5 @@
 import initStoryshots from '@storybook/addon-storyshots';
-initStoryshots();
+import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
+initStoryshots({
+  test: imageSnapshot({ storybookUrl: 'http://localhost:6006/' }),
+});
