@@ -16,6 +16,6 @@ export const FirstStory = Template.bind({});
 
 FirstStory.args = {
     //squares[0] 等で取得し、一連の文字列としている？そのため、△連打！！！！
-    squares:"△△△△△△△△△",    onClick: action("Board click check!!!!") ,
+    squares:"△△△△△△△△△△△△△",    onClick: action("Board click check!!!!") ,
 }
 
